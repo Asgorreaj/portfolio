@@ -1,10 +1,11 @@
+import About from "./components/About";
 import Navbar from "./components/Navbar";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+    <main className="bg-gray-900 text-white flex flex-col">
       <Navbar />
-      <div className="text-center">
-        
+      <div className="min-h-screen flex flex-col items-center justify-center text-center">
         <h1 className="text-5xl font-bold mb-4">
           Hi, I'm Asgor
         </h1>
@@ -12,6 +13,7 @@ export default function Home() {
           Software Engineer & AI Researcher
         </p>
       </div>
+      <About />
     </main>
   );
 }
