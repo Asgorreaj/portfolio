@@ -1,19 +1,13 @@
-import About from "./components/About";
 import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Hero from "./components/Hero";
 
 export default function Home() {
   return (
     <main className="bg-gray-900 text-white flex flex-col">
       <Navbar />
-      <div className="min-h-screen flex flex-col items-center justify-center text-center">
-        <h1 className="text-5xl font-bold mb-4">
-          Hi, I'm Asgor
-        </h1>
-        <p className="text-xl text-gray-400">
-          Software Engineer & AI Researcher
-        </p>
-      </div>
+      <Hero />
       <About />
     </main>
   );
-}
+}0
