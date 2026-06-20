@@ -1,22 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function TypingText({ text }: { text: string }) {
-  const [displayedText, setDisplayedText] = useState("");
+export default function TypingText({ text}:{ text: string }){
+    const [displayedText, setDisplayedText] = useState("");
 
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      setDisplayedText(text.slice(0, index + 1));
-      index++;
-      if (index === text.length) {
-        clearInterval(interval);
-      }
-    }, 80);
+    useEffect(() => {
+        let index = 0;
+        const interval = setInterval(() => {
+            setDisplayedText((prev) => prev + text[index]);
+            index++;
+            if (index === text.length) {
+                clearInterval(interval);
+            }
+        }, 80);
+        return () => clearInterval(interval);
+    }, [text]);
 
-    return () => clearInterval(interval);
-  }, [text]);
-
-  return <span>{displayedText}</span>;
+    return <span>{displayedText}</span>;
 }

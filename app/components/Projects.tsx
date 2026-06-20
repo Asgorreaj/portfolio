@@ -13,6 +13,8 @@ type Project = {
 };
 
 const projects: Project[] = [
+    // TODO: TourAndTravel - video demo bakhi ache, videoUrl field already add kora ache, just video file বসাতে হবে /public/videos/ folder e
+  // TODO: liveUrl field - jegula Vercel e deploy hobe segula te liveUrl: "https://..." add korte hobe
   {
     title: "Donation & Charity Platform",
     description: "Full-stack donation platform with PHP backend and TypeScript frontend, enabling secure donation tracking.",
