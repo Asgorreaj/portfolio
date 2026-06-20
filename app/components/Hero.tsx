@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import TypingText from "./TypingText";
 
 export default function Hero() {
   return (
@@ -12,6 +13,17 @@ export default function Hero() {
       >
         Available for opportunities
       </motion.div>
+
+      <motion.h1
+        className="text-2xl text-indigo-400 mb-2 font-mono"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <TypingText text="Hi, I'm Asgor 👋" />
+      </motion.h1>
+      
+      
 
       <motion.h1
         className="text-5xl font-bold text-slate-100 mb-4 leading-tight"
