@@ -4,7 +4,7 @@ import TypingText from "./TypingText";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
+    <section className="min-h-[90vh] md:min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20">
       <motion.div
         className="mb-4 px-4 py-1 rounded-full border border-indigo-500/40 bg-indigo-500/10 text-indigo-400 text-xs tracking-widest"
         initial={{ opacity: 0, y: 10 }}

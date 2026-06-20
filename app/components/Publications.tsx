@@ -52,7 +52,7 @@ const publications: Publication[] = [
 
 export default function Publications() {
   return (
-    <section id="publications" className="min-h-screen px-8 py-20 border-t border-slate-800">
+    <section id="publications" className="min-h-[70vh] md:min-h-screen px-8 py-20 border-t border-slate-800">
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: 30 }}

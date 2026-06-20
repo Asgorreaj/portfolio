@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-8 border-t border-slate-800">
+    <section id="about" className="min-h-[70vh] md:min-h-screen flex items-center justify-center px-8 border-t border-slate-800">
       <motion.div
         className="max-w-3xl text-center"
         initial={{ opacity: 0, y: 50 }}

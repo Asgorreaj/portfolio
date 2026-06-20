@@ -41,7 +41,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="min-h-screen px-8 py-20 border-t border-slate-800">
+    <section id="projects" className="min-h-[70vh] md:min-h-screen px-8 py-20 border-t border-slate-800">
       <motion.h2
         className="text-4xl font-bold text-slate-100 text-center mb-12"
         initial={{ opacity: 0, y: 30 }}
