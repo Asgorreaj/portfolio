@@ -16,52 +16,134 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="min-h-[70vh] md:min-h-screen flex items-center justify-center px-8 py-20 border-t border-slate-800">
-      <motion.div
-        className="max-w-lg w-full"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-4xl font-bold text-slate-100 text-center mb-3">Get in Touch</h2>
-        <p className="text-slate-400 text-center mb-10">
-          Have a project in mind? Let's talk.
-        </p>
+    <section
+      id="contact"
+      style={{
+        background: "linear-gradient(135deg, #0FA6C7 0%, #89C4CF 45%, #C4A090 78%, #EBC8B5 100%)",
+        borderRadius: "64px 64px 0 0",
+        padding: "80px 24px",
+      }}
+    >
+      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 style={{ fontSize: "clamp(32px, 5vw, 56px)", fontWeight: 500, color: "#fff", marginBottom: "16px", letterSpacing: "-2px" }}>
+            Let's connect
+          </h2>
+          <p style={{ fontSize: "clamp(15px, 2vw, 18px)", color: "rgba(255,255,255,0.75)", marginBottom: "40px", maxWidth: "500px", lineHeight: 1.7 }}>
+            Open to software engineering and AI/ML opportunities.
+            Feel free to reach out — I would love to hear from you.
+          </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-indigo-500 transition"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-indigo-500 transition"
-          />
-          <textarea
-            placeholder="Your Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-            rows={5}
-            className="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-indigo-500 transition resize-none"
-          />
-          <button
-            type="submit"
-            className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg transition font-medium"
-          >
-            Send Message
-          </button>
-        </form>
-      </motion.div>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
+            {/* Form */}
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <input
+                type="text"
+                placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  borderRadius: "50px",
+                  padding: "14px 24px",
+                  color: "white",
+                  fontSize: "15px",
+                  outline: "none",
+                }}
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  borderRadius: "50px",
+                  padding: "14px 24px",
+                  color: "white",
+                  fontSize: "15px",
+                  outline: "none",
+                }}
+              />
+              <textarea
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
+                rows={4}
+                style={{
+                  background: "rgba(255,255,255,0.15)",
+                  border: "1px solid rgba(255,255,255,0.35)",
+                  borderRadius: "24px",
+                  padding: "14px 24px",
+                  color: "white",
+                  fontSize: "15px",
+                  outline: "none",
+                  resize: "none",
+                }}
+              />
+              <button
+                type="submit"
+                style={{
+                  background: "#EBC8B5",
+                  color: "#1A1A1A",
+                  border: "none",
+                  borderRadius: "50px",
+                  padding: "16px 36px",
+                  fontWeight: 700,
+                  fontSize: "14px",
+                  letterSpacing: "1.5px",
+                  cursor: "pointer",
+                  textTransform: "uppercase",
+                }}
+              >
+                Send Message
+              </button>
+            </form>
+
+            {/* Info cards */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              {[
+                { label: "Email", value: "asgorreaj@gmail.com", icon: "✉️" },
+                { label: "Location", value: "Dhaka, Bangladesh", icon: "📍" },
+                { label: "LinkedIn", value: "linkedin.com/in/asgordevai", icon: "💼" },
+                { label: "GitHub", value: "github.com/Asgorreaj", icon: "⚡" },
+                { label: "ResearchGate", value: "Md-Asgor-Hossain-Reaj", icon: "🔬" },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  style={{
+                    background: "rgba(255,255,255,0.15)",
+                    border: "1px solid rgba(255,255,255,0.25)",
+                    borderRadius: "20px",
+                    padding: "16px 20px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "14px",
+                  }}
+                >
+                  <span style={{ fontSize: "20px" }}>{item.icon}</span>
+                  <div>
+                    <p style={{ fontSize: "10px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "2px", color: "rgba(255,255,255,0.55)", margin: "0 0 2px" }}>
+                      {item.label}
+                    </p>
+                    <p style={{ fontSize: "14px", color: "white", fontWeight: 500, margin: 0 }}>{item.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }
