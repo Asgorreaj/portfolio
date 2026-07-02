@@ -111,7 +111,7 @@ export default function Education() {
               Applied Machine Learning
             </h3>
             <span style={{ display: "inline-flex", alignItems: "center", fontSize: "13px", fontWeight: 600, background: "rgba(255,255,255,0.2)", color: "#fff", borderRadius: "50px", padding: "8px 20px", border: "1px solid rgba(255,255,255,0.3)" }}>
-              Certificate Course
+              Running
             </span>
           </div>
           <div style={{ textAlign: "right", flexShrink: 0, position: "relative", zIndex: 1 }}>

@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-// import About from "./components/About";
+import About from "./components/About";
 import Education from "./components/Education";
 import WorkExperience from "./components/WorkExperience";
 import Projects from "./components/Projects";
@@ -15,13 +15,14 @@ export default function Home() {
     <main style={{ background: "#F3EDE3" }}>
       <Navbar />
       <Hero />
-      {/* <About /> */}
+      {/*  */}
       <Education />
       <WorkExperience />
       <Projects />
       <Skills />
       <Publications />
       <Volunteering/>
+      <About />
       <Contact />
       <Footer />
     </main>
